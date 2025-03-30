@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import minhaFoto from '../../assets/image/eu.jpeg';
 import logoJava from '../../assets/image/logoJava.png';
+import Yuki from '../../assets/image/Yuki.png';
 
 export default function sobreNos() {
     return (
@@ -112,15 +113,15 @@ export default function sobreNos() {
                             </ul>
                         </div>
                     </div>
-                    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700 w-full">
                         <a href="#">
-                            <Image className="w-40 rounded-lg sm:rounded-none sm:rounded-l-lg" src={logoJava} alt="Jese Avatar" />
+                            <Image className="m-5 w-40 h-55 rounded-full sm:rounded-full sm:rounded-full" src={Yuki} alt="Jese Avatar" />
                         </a>
                         <div className="p-5">
                             <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                <a href="#">?</a>
+                                <a href="#">Victor Yuki Fernandes</a>
                             </h3>
-                            <span className="text-gray-500 dark:text-gray-400">?</span>
+                            <span className="text-gray-500 dark:text-gray-400">Desenvolvedor Back-End</span>
                             <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Estudante de analise e desenvolvimento de sistemas.</p>
                             <ul className="flex space-x-4 sm:mt-0">
                                 <li>
@@ -159,13 +160,13 @@ export default function sobreNos() {
 
                         <div className="p-5">
                             <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                <a href="#">Sobre ?</a>
+                                <a href="#">Sobre Victor</a>
                             </h3>
                             <span className="text-gray-500 dark:text-gray-400">Desenvolvedor do projeto CTV</span>
-                            <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, temporibus? Corporis, labore. Aliquid deserunt magnam, optio modi, assumenda ipsa accusamus velit suscipit animi eos harum quidem quasi adipisci dignissimos cupiditate.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, temporibus? Corporis, labore. Aliquid deserunt magnam, optio modi, assumenda ipsa accusamus velit suscipit animi eos harum quidem quasi adipisci dignissimos cupiditate.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, temporibus? Corporis, labore. Aliquid deserunt magnam, optio modi, assumenda ipsa accusamus velit suscipit animi eos harum quidem quasi adipisci dignissimos cupiditate.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, temporibus? Corporis, labore. Aliquid deserunt magnam, optio modi, assumenda ipsa accusamus velit suscipit animi eos harum quidem quasi adipisci dignissimos cupiditate. </p>
+                            <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Fala, minha rapazeada! Sou o Yuki, estudante de Análise e Desenvolvimento de Sistemas e um apaixonado por tecnologia. No meu tempo livre, curto jogar, 
+                                ir pra academia e, principalmente, ler. Decidi participar desse projeto porque quero ampliar e fortalecer meus conhecimentos em front-end, 
+                                e espero contribuir com meu esforço e dedicação. Me considero uma pessoa curiosa, que sempre testa suas capacidades – por isso, adoro um desafio!           
+                                 </p>
                         </div>
                     </div>
                 </div>
