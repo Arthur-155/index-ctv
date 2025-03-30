@@ -62,7 +62,7 @@ export default function Modulos() {
                     <div className="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
                         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                             <div className="h-56 w-full">
-                                <a href="#">
+                                <a href="/[id]">
                                     <Image className="mx-auto h-full dark:hidden" src={logoJava} alt="" />
                                     <Image className="mx-auto hidden h-full dark:block" src={logoJava} alt="" />
                                 </a>
