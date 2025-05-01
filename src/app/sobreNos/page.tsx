@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import minhaFoto from '../../assets/image/eu.jpeg';
-import logoJava from '../../assets/image/logoJava.png';
 import Yuki from '../../assets/image/Yuki.png';
 
 export default function sobreNos() {

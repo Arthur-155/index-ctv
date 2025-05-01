@@ -1,4 +1,3 @@
-import logoJava from '../../assets/image/logoJava.png';
 import Image from 'next/image'
 import Script from 'next/script';
 import ex13 from '../../assets/image/Inserir um título (17).png';

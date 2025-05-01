@@ -1,6 +1,4 @@
 
-import Image from 'next/image'
-
 export default function login() {
     return (
         <section className="bg-gray-50 dark:bg-gray-900">
