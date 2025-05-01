@@ -15,7 +15,7 @@ export default function Home() {
                     </a>
                     <h1 className="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">Tem dúvida de como usar a nossa plataforma ?</h1>
                     <p className="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Seguindo esse documento iremos ensinar como utilizar o Cat The Vision, explorando todas as suas funcionalidades...</p>
-                    <a href="#" className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:focus:ring-green-900">
+                    <a href="/sobreNos" className="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:focus:ring-green-900">
                         Ler mais
                         <svg className="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />

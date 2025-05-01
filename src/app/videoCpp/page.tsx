@@ -1,4 +1,4 @@
-export default function videoJava6() {
+export default function videoCpp() {
     return (
         <main className="flex flex-col items-center gap-20 justify-between p-24 dark:bg-gray-900">
            <nav className="flex" aria-label="Breadcrumb">
@@ -28,15 +28,14 @@ export default function videoJava6() {
                             <svg className="h-5 w-5 text-gray-400 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
                             </svg>
-                            <a href="/java1" className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2 dark:hover:text-white">Java</a>
+                            <a href="/cppDesafios" className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2 dark:hover:text-white">C++ - Desafios</a>
                         </div>
                     </li>
                 </ol>
             </nav>
             <div className="rounded-lg border-bg-gray-900 bg-gray-800 p-10 mb-10">
-                <iframe width="700" height="415" src="https://www.youtube.com/embed/J9LlAbe6y5U?si=Hpg8gX0_4zrIDy0Q" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pCngSuEu8GE?si=hc4VnzNijhEij3yX" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
         </main>
-
     )
 }

@@ -104,8 +104,8 @@ export default function Modulos() {
                         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                             <div className="h-56 w-full">
                                 <a href="#">
-                                    <Image className="mx-auto h-full dark:hidden" src={logoJava} alt="" />
-                                    <Image className="mx-auto hidden h-full dark:block" src={logoJava} alt="" />
+                                    <Image className="mx-auto h-full dark:hidden" src={emBreve} alt="" />
+                                    <Image className="mx-auto hidden h-full dark:block" src={emBreve} alt="" />
                                 </a>
                             </div>
 
@@ -154,8 +154,8 @@ export default function Modulos() {
                         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                             <div className="h-56 w-full">
                                 <a href="#">
-                                    <Image className="mx-auto h-full dark:hidden" src={logoJava} alt="" />
-                                    <Image className="mx-auto hidden h-full dark:block" src={logoJava} alt="" />
+                                    <Image className="mx-auto h-full dark:hidden" src={emBreve} alt="" />
+                                    <Image className="mx-auto hidden h-full dark:block" src={emBreve} alt="" />
                                 </a>
                             </div>
 
@@ -199,7 +199,7 @@ export default function Modulos() {
                         </div>
                         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800 flex flex-col">
                             <div className="h-full w-full flex align-center justify-center">
-                                <a href="#">
+                                <a href="/cppDesafios">
                                     <Image className="mx-auto h-full dark:hidden" src= {logoCPlusPlus} alt="" />
                                     <Image className="mx-auto hidden h-50 dark:block" src= {logoCPlusPlus} alt="" />
                                 </a>
@@ -227,7 +227,7 @@ export default function Modulos() {
                                     </div>
                                 </div>
 
-                                <a href="#" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">C++ - Desafios</a>
+                                <a href="/cppDesafios" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">C++ - Desafios</a>
 
                                 <div className="mt-2 flex items-center gap-2">
                                     <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Nesse Módulo iremos realizar desafios do Moreno em C++</p>

@@ -1,7 +1,7 @@
-export default function videoJava6() {
+export default function videoJava10() {
     return (
-        <main className="flex flex-col items-center gap-20 justify-between p-24 dark:bg-gray-900">
-           <nav className="flex" aria-label="Breadcrumb">
+        <main className="flex flex-col items-center justify-between gap-20 p-24 dark:bg-gray-900">
+            <nav className="flex" aria-label="Breadcrumb">
                 <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                     <li className="inline-flex items-center">
                         <a href="/home" className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary-600 dark:text-gray-400 dark:hover:text-white">
@@ -34,9 +34,8 @@ export default function videoJava6() {
                 </ol>
             </nav>
             <div className="rounded-lg border-bg-gray-900 bg-gray-800 p-10 mb-10">
-                <iframe width="700" height="415" src="https://www.youtube.com/embed/J9LlAbe6y5U?si=Hpg8gX0_4zrIDy0Q" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7BaQJxevuz0?si=Z_gs92eMrUQ3Q6QX" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
         </main>
-
     )
 }

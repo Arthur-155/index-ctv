@@ -1,19 +1,16 @@
 import logoJava from '../../assets/image/logoJava.png';
 import Image from 'next/image'
 import Script from 'next/script';
-import ex13 from '../../assets/image/Inserir um título (17).png';
-import ex45 from '../../assets/image/ex4-5.png';
-import ex6 from '../../assets/image/ex6.png';
-import ex78 from '../../assets/image/ex7.png';
-import ex10 from '../../assets/image/ex10.png';
+import emBreve from '../../assets/image/emBreve.png';
+import pDesafio from '../../assets/image/pDesafio.png';
 
-export default function java1() {
-    return (
+export default function CppDesafios() {
+    return(
         <section className="bg-white dark:bg-gray-900">
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
                 <div className="mr-auto place-self-center lg:col-span-7">
-                    <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Vídeos sobre Java</h1>
-                    <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Resolvendo os primeiros 10 exercícios passados pelo professor João Paulo - Criação de Classes e Objetos</p>
+                    <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Vídeos sobre C / C++</h1>
+                    <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Resolvendo alguns desafios propostos pelo professor moreno!</p>
                     <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                         Começar
                         <svg className="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -27,8 +24,8 @@ export default function java1() {
                 <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
                     <dl className="grid max-w-screen-md gap-8 mx-auto text-gray-900 sm:grid-cols-3 dark:text-white">
                         <div className="flex flex-col items-center justify-center">
-                            <dt className="mb-2 text-3xl md:text-4xl font-extrabold">5</dt>
-                            <dd className="font-light text-gray-500 dark:text-gray-400">Vídeos</dd>
+                            <dt className="mb-2 text-3xl md:text-4xl font-extrabold">1</dt>
+                            <dd className="font-light text-gray-500 dark:text-gray-400">Vídeo</dd>
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <dt className="mb-2 text-3xl md:text-4xl font-extrabold">1</dt>
@@ -64,7 +61,7 @@ export default function java1() {
                                                 <svg className="h-5 w-5 text-gray-400 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
                                                 </svg>
-                                                <span className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2">Módulos</span>
+                                                <a href="/modulos" className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2">Módulos</a>
                                             </div>
                                         </li>
                                         <li aria-current="page">
@@ -72,7 +69,7 @@ export default function java1() {
                                                 <svg className="h-5 w-5 text-gray-400 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
                                                 </svg>
-                                                <span className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2">Java</span>
+                                                <a href="" className='className="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400 md:ms-2"'>C++ - Desafios</a>
                                             </div>
                                         </li>
                                     </ol>
@@ -85,9 +82,9 @@ export default function java1() {
                         <div className="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
                             <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                                 <div className="h-56 w-full">
-                                    <a href="/videoJava1">
-                                        <Image className="mx-auto h-full dark:hidden" src={ex13} alt="" />
-                                        <Image className="mx-auto hidden h-full dark:block" src={ex13} alt="" />
+                                    <a href="/videoCpp">
+                                        <Image className="mx-auto h-full dark:hidden" src={pDesafio} alt="" />
+                                        <Image className="mx-auto hidden h-full dark:block" src={pDesafio} alt="" />
                                     </a>
                                 </div>
                                 <div className="pt-6">
@@ -108,10 +105,10 @@ export default function java1() {
                                         </div>
                                     </div>
 
-                                    <a href="/videoJava1" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Exercício 1 - 3</a>
+                                    <a href="/videoJava1" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">1° Desafio</a>
 
                                     <div className="mt-2 flex items-center gap-2">
-                                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Módulo de java, realizando primeira lista de exercícios!</p>
+                                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Realizando o primeiro desafio proposto pelo professor moreno!</p>
                                     </div>
 
                                     <ul className="mt-2 flex items-center gap-4">
@@ -119,7 +116,7 @@ export default function java1() {
                                             <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 20">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16.5A2.493 2.493 0 0 1 6.51 18H6.5a2.468 2.468 0 0 1-2.4-3.154 2.98 2.98 0 0 1-.85-5.274 2.468 2.468 0 0 1 .921-3.182 2.477 2.477 0 0 1 1.875-3.344 2.5 2.5 0 0 1 3.41-1.856A2.5 2.5 0 0 1 11 3.5m0 13v-13m0 13a2.492 2.492 0 0 0 4.49 1.5h.01a2.467 2.467 0 0 0 2.403-3.154 2.98 2.98 0 0 0 .847-5.274 2.468 2.468 0 0 0-.921-3.182 2.479 2.479 0 0 0-1.875-3.344A2.5 2.5 0 0 0 13.5 1 2.5 2.5 0 0 0 11 3.5m-8 5a2.5 2.5 0 0 1 3.48-2.3m-.28 8.551a3 3 0 0 1-2.953-5.185M19 8.5a2.5 2.5 0 0 0-3.481-2.3m.28 8.551a3 3 0 0 0 2.954-5.185" />
                                             </svg>
-                                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">22 Minutos</p>
+                                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">1 Hora</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -127,8 +124,8 @@ export default function java1() {
                             <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                                 <div className="h-56 w-full">
                                     <a href="/videoJava45">
-                                        <Image className="mx-auto h-full dark:hidden" src={ex45} alt="" />
-                                        <Image className="mx-auto hidden h-full dark:block" src={ex45} alt="" />
+                                        <Image className="mx-auto h-full dark:hidden" src={emBreve} alt="" />
+                                        <Image className="mx-auto hidden h-full dark:block" src={emBreve} alt="" />
                                     </a>
                                 </div>
 
@@ -154,12 +151,12 @@ export default function java1() {
                                         </div>
                                     </div>
 
-                                    <a href="/videoJava45" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Exercícios 4 - 5</a>
+                                    <a href="/videoJava45" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Desafio ?</a>
 
                                     <div className="mt-2 flex items-center gap-2">
                                         <div className="flex items-center">
                                         </div>
-                                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Segundo Módulo de java, resolvendo exercícios de encapsulamento</p>
+                                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Realizando o segundo desafio</p>
                                     </div>
 
                                     <ul className="mt-2 flex items-center gap-4">
@@ -167,7 +164,7 @@ export default function java1() {
                                             <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 20">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16.5A2.493 2.493 0 0 1 6.51 18H6.5a2.468 2.468 0 0 1-2.4-3.154 2.98 2.98 0 0 1-.85-5.274 2.468 2.468 0 0 1 .921-3.182 2.477 2.477 0 0 1 1.875-3.344 2.5 2.5 0 0 1 3.41-1.856A2.5 2.5 0 0 1 11 3.5m0 13v-13m0 13a2.492 2.492 0 0 0 4.49 1.5h.01a2.467 2.467 0 0 0 2.403-3.154 2.98 2.98 0 0 0 .847-5.274 2.468 2.468 0 0 0-.921-3.182 2.479 2.479 0 0 0-1.875-3.344A2.5 2.5 0 0 0 13.5 1 2.5 2.5 0 0 0 11 3.5m-8 5a2.5 2.5 0 0 1 3.48-2.3m-.28 8.551a3 3 0 0 1-2.953-5.185M19 8.5a2.5 2.5 0 0 0-3.481-2.3m.28 8.551a3 3 0 0 0 2.954-5.185" />
                                             </svg>
-                                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">4 Minutos</p>
+                                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">5 Horas</p>
                                         </li>
                                     </ul>
 
@@ -177,8 +174,8 @@ export default function java1() {
                             <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                                 <div className="h-56 w-full">
                                     <a href="/videoJava6">
-                                        <Image className="mx-auto h-full dark:hidden" src={ex6} alt="" />
-                                        <Image className="mx-auto hidden h-full dark:block" src={ex6} alt="" />
+                                        <Image className="mx-auto h-full dark:hidden" src={emBreve} alt="" />
+                                        <Image className="mx-auto hidden h-full dark:block" src={emBreve} alt="" />
                                     </a>
                                 </div>
 
@@ -204,10 +201,10 @@ export default function java1() {
                                         </div>
                                     </div>
 
-                                    <a href="/videoJava6" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Exercício - 6</a>
+                                    <a href="/videoJava6" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Desafio ?</a>
 
                                     <div className="mt-2 flex items-center gap-2">
-                                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Terceiro Módulo de java, fazendo exercícios de herança!</p>
+                                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Realizando o terceiro desafio</p>
                                     </div>
 
                                     <ul className="mt-2 flex items-center gap-4">
@@ -215,7 +212,7 @@ export default function java1() {
                                             <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 20">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16.5A2.493 2.493 0 0 1 6.51 18H6.5a2.468 2.468 0 0 1-2.4-3.154 2.98 2.98 0 0 1-.85-5.274 2.468 2.468 0 0 1 .921-3.182 2.477 2.477 0 0 1 1.875-3.344 2.5 2.5 0 0 1 3.41-1.856A2.5 2.5 0 0 1 11 3.5m0 13v-13m0 13a2.492 2.492 0 0 0 4.49 1.5h.01a2.467 2.467 0 0 0 2.403-3.154 2.98 2.98 0 0 0 .847-5.274 2.468 2.468 0 0 0-.921-3.182 2.479 2.479 0 0 0-1.875-3.344A2.5 2.5 0 0 0 13.5 1 2.5 2.5 0 0 0 11 3.5m-8 5a2.5 2.5 0 0 1 3.48-2.3m-.28 8.551a3 3 0 0 1-2.953-5.185M19 8.5a2.5 2.5 0 0 0-3.481-2.3m.28 8.551a3 3 0 0 0 2.954-5.185" />
                                             </svg>
-                                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">6 Minutos</p>
+                                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">5 Horas</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -223,8 +220,8 @@ export default function java1() {
                             <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800 flex flex-col">
                                 <div className="h-full w-full flex align-center justify-center">
                                     <a href="/videoJava78">
-                                        <Image className="mx-auto h-full dark:hidden" src={ex78} alt="" />
-                                        <Image className="mx-auto hidden h-50 dark:block" src={ex78} alt="" />
+                                        <Image className="mx-auto h-full dark:hidden" src={emBreve} alt="" />
+                                        <Image className="mx-auto hidden h-50 dark:block" src={emBreve} alt="" />
                                     </a>
                                 </div>
 
@@ -250,10 +247,10 @@ export default function java1() {
                                         </div>
                                     </div>
 
-                                    <a href="/videoJava78" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Exercícios 7 - 8</a>
+                                    <a href="/videoJava78" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Desafio ?</a>
 
                                     <div className="mt-2 flex items-center gap-2">
-                                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Nesse Módulo iremos realizar desafios do Moreno em C++</p>
+                                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Realizando o quarto desafio</p>
                                     </div>
 
                                     <ul className="mt-2 flex items-center gap-4">
@@ -261,16 +258,16 @@ export default function java1() {
                                             <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 20">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16.5A2.493 2.493 0 0 1 6.51 18H6.5a2.468 2.468 0 0 1-2.4-3.154 2.98 2.98 0 0 1-.85-5.274 2.468 2.468 0 0 1 .921-3.182 2.477 2.477 0 0 1 1.875-3.344 2.5 2.5 0 0 1 3.41-1.856A2.5 2.5 0 0 1 11 3.5m0 13v-13m0 13a2.492 2.492 0 0 0 4.49 1.5h.01a2.467 2.467 0 0 0 2.403-3.154 2.98 2.98 0 0 0 .847-5.274 2.468 2.468 0 0 0-.921-3.182 2.479 2.479 0 0 0-1.875-3.344A2.5 2.5 0 0 0 13.5 1 2.5 2.5 0 0 0 11 3.5m-8 5a2.5 2.5 0 0 1 3.48-2.3m-.28 8.551a3 3 0 0 1-2.953-5.185M19 8.5a2.5 2.5 0 0 0-3.481-2.3m.28 8.551a3 3 0 0 0 2.954-5.185" />
                                             </svg>
-                                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">22 Minutos</p>
+                                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">5 Horas</p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>   
                             <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
                                 <div className="h-56 w-full">
-                                    <a href="/videoJava10">
-                                        <Image className="mx-auto h-full dark:hidden" src={ex10} alt="" />
-                                        <Image className="mx-auto hidden h-full dark:block" src={ex10} alt="" />
+                                    <a href="#">
+                                        <Image className="mx-auto h-full dark:hidden" src={emBreve} alt="" />
+                                        <Image className="mx-auto hidden h-full dark:block" src={emBreve} alt="" />
                                     </a>
                                 </div>
                                 <div className="pt-6">
@@ -295,10 +292,10 @@ export default function java1() {
                                         </div>
                                     </div>
 
-                                    <a href="videoJava10" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Exercício 10</a>
+                                    <a href="videoJava10" className="text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">Desafio ?</a>
 
                                     <div className="mt-2 flex items-center gap-2">
-                                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Realizando o quinto desafio</p>
                                     </div>
 
                                     <ul className="mt-2 flex items-center gap-4">
@@ -306,7 +303,7 @@ export default function java1() {
                                             <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 20">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16.5A2.493 2.493 0 0 1 6.51 18H6.5a2.468 2.468 0 0 1-2.4-3.154 2.98 2.98 0 0 1-.85-5.274 2.468 2.468 0 0 1 .921-3.182 2.477 2.477 0 0 1 1.875-3.344 2.5 2.5 0 0 1 3.41-1.856A2.5 2.5 0 0 1 11 3.5m0 13v-13m0 13a2.492 2.492 0 0 0 4.49 1.5h.01a2.467 2.467 0 0 0 2.403-3.154 2.98 2.98 0 0 0 .847-5.274 2.468 2.468 0 0 0-.921-3.182 2.479 2.479 0 0 0-1.875-3.344A2.5 2.5 0 0 0 13.5 1 2.5 2.5 0 0 0 11 3.5m-8 5a2.5 2.5 0 0 1 3.48-2.3m-.28 8.551a3 3 0 0 1-2.953-5.185M19 8.5a2.5 2.5 0 0 0-3.481-2.3m.28 8.551a3 3 0 0 0 2.954-5.185" />
                                             </svg>
-                                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">6 Minutos</p>
+                                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">5 Horas</p>
                                         </li>
                                     </ul>
 

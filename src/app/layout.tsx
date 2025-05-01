@@ -4,6 +4,11 @@ import Script from 'next/script';
 import Footer from '../footer/Footer'
 
 
+export const metadata = {
+  title: 'Cat The Vision',
+  description: 'Explore o CTV',
+  
+};
 
 
 
@@ -12,6 +17,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  
 
 
   return (
