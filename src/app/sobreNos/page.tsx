@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import minhaFoto from '../../assets/image/eu.jpeg';
 import Yuki from '../../assets/image/Yuki.png';
+import diogo from '../../assets/image/Diogo.png'
 
 export default function sobreNos() {
     return (
@@ -168,6 +169,19 @@ export default function sobreNos() {
                                  </p>
                         </div>
                     </div>
+                    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+
+                        <div className="p-5">
+                            <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Sobre Diogo</a>
+                            </h3>
+                            <span className="text-gray-500 dark:text-gray-400">Desenvolvedor do projeto CTV</span>
+                            <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Olá! Meu nome é Diogo, sou estudante de Análise e Desenvolvimento de Sistemas e sempre gostei da ideia de usar a tecnologia como uma forma de
+                                 transformar a vida das pessoas. Acredito que o conhecimento só tem valor real quando é compartilhado. Foi justamente por isso que decidi participar da criação deste site junto com meus amigos. 
+                                 Se esse site conseguir facilitar a vida de alguém, já vai ter cumprido o propósito pelo qual nasceu.</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
