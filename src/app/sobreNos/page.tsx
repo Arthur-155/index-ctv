@@ -2,6 +2,7 @@ import Image from 'next/image'
 import minhaFoto from '../../assets/image/eu.jpeg';
 import Yuki from '../../assets/image/Yuki.png';
 import diogo from '../../assets/image/diogo.png';
+import silas from '../../assets/image/Silas.png'
 
 export default function sobreNos() {
     return (
@@ -113,6 +114,18 @@ export default function sobreNos() {
                             </ul>
                         </div>
                     </div>
+                    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+
+                        <div className="p-5">
+                            <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Sobre Arthur</a>
+                            </h3>
+                            <span className="text-gray-500 dark:text-gray-400">Desenvolvedor do projeto CTV</span>
+                            <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Olá! Meu nome é Arthur, sou um desenvolvedor full-stack e Analista na DB1 Group, apaixonado por tecnologia e soluções criativas. Minha jornada na programação começou em 2024, quando eu entrei na faculdade. Desde então, tenho me dedicado a criar aplicações web que sejam intuitivas e eficientes. Ao longo desse tempo de estudos, adquiri experiência com diversas tecnologias.
+                            Acredito que a tecnologia deve ser usada para resolver problemas reais e melhorar a vida das pessoas. Por isso, busco sempre criar soluções que sejam não apenas funcionais, mas também acessíveis e impactantes.
+                            Atualmente, estou focado em aprender mais sobre técnologias no geral (sou um curioso, quanto a isso) e contribuir para projetos de código aberto. Fora do mundo da programação, sou um entusiasta de corrida, e acredito que equilibrar trabalho e paixões é essencial para a criatividade e o bem-estar. </p>
+                        </div>
+                    </div>
                     <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700 w-full">
                         <a href="#">
                             <Image className="m-5 w-40 h-55 rounded-full sm:rounded-full sm:rounded-full" src={Yuki} alt="Jese Avatar" />
@@ -138,6 +151,19 @@ export default function sobreNos() {
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+
+                        <div className="p-5">
+                            <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Sobre Victor</a>
+                            </h3>
+                            <span className="text-gray-500 dark:text-gray-400">Desenvolvedor do projeto CTV</span>
+                            <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Fala, minha rapazeada! Sou o Yuki, estudante de Análise e Desenvolvimento de Sistemas e um apaixonado por tecnologia. No meu tempo livre, curto jogar,
+                                ir pra academia e, principalmente, ler. Decidi participar desse projeto porque quero ampliar e fortalecer meus conhecimentos em front-end,
+                                e espero contribuir com meu esforço e dedicação. Me considero uma pessoa curiosa, que sempre testa suas capacidades – por isso, adoro um desafio!
+                            </p>
                         </div>
                     </div>
                     <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700 w-full">
@@ -172,44 +198,54 @@ export default function sobreNos() {
 
                         <div className="p-5">
                             <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                <a href="#">Sobre Arthur</a>
-                            </h3>
-                            <span className="text-gray-500 dark:text-gray-400">Desenvolvedor do projeto CTV</span>
-                            <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Olá! Meu nome é Arthur, sou um desenvolvedor full-stack apaixonado por tecnologia e soluções criativas. Minha jornada na programação começou em 2024, quando eu entrei na faculdade. Desde então, tenho me dedicado a criar aplicações web que sejam intuitivas e eficientes.
-
-                                Ao longo desse tempo de estudos, adquiri experiência com diversas tecnologias.
-
-                                Acredito que a tecnologia deve ser usada para resolver problemas reais e melhorar a vida das pessoas. Por isso, busco sempre criar soluções que sejam não apenas funcionais, mas também acessíveis e impactantes.
-
-                                Atualmente, estou focado em aprender mais sobre técnologias no geral (sou um curioso, quanto a isso) e contribuir para projetos de código aberto. Fora do mundo da programação, sou um entusiasta de corrida, e acredito que equilibrar trabalho e paixões é essencial para a criatividade e o bem-estar. </p>
-                        </div>
-                    </div>
-                    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-
-                        <div className="p-5">
-                            <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                <a href="#">Sobre Victor</a>
-                            </h3>
-                            <span className="text-gray-500 dark:text-gray-400">Desenvolvedor do projeto CTV</span>
-                            <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Fala, minha rapazeada! Sou o Yuki, estudante de Análise e Desenvolvimento de Sistemas e um apaixonado por tecnologia. No meu tempo livre, curto jogar, 
-                                ir pra academia e, principalmente, ler. Decidi participar desse projeto porque quero ampliar e fortalecer meus conhecimentos em front-end, 
-                                e espero contribuir com meu esforço e dedicação. Me considero uma pessoa curiosa, que sempre testa suas capacidades – por isso, adoro um desafio!           
-                                 </p>
-                        </div>
-                    </div>
-                    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-
-                        <div className="p-5">
-                            <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                                 <a href="#">Sobre Diogo</a>
                             </h3>
                             <span className="text-gray-500 dark:text-gray-400">Desenvolvedor do projeto CTV</span>
                             <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Olá! Meu nome é Diogo, sou estudante de Análise e Desenvolvimento de Sistemas e sempre gostei da ideia de usar a tecnologia como uma forma de
-                                 transformar a vida das pessoas. Acredito que o conhecimento só tem valor real quando é compartilhado. Foi justamente por isso que decidi participar da criação deste site junto com meus amigos. 
-                                 Se esse site conseguir facilitar a vida de alguém, já vai ter cumprido o propósito pelo qual nasceu.</p>
+                                transformar a vida das pessoas. Acredito que o conhecimento só tem valor real quando é compartilhado. Foi justamente por isso que decidi participar da criação deste site junto com meus amigos.
+                                Se esse site conseguir facilitar a vida de alguém, já vai ter cumprido o propósito pelo qual nasceu.</p>
                         </div>
                     </div>
-                    
+                    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700 w-full">
+                        <a href="#">
+                            <Image className="m-5 w-40 h-55 rounded-full sm:rounded-full sm:rounded-full" src={silas} alt="Bonnie Avatar" />
+                        </a>
+                        <div className="p-5">
+                            <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#"> Sousa Espinola</a>
+                            </h3>
+                            <span className="text-gray-500 dark:text-gray-400">Analista de Dados</span>
+                            <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Estudante de Analise e Desenvolvimento de Sistemas</p>
+                            <ul className="flex space-x-4 sm:mt-0">
+                                <li>
+                                    <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd" />
+                                            <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+                                        </svg>
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+
+                        <div className="p-5">
+                            <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <a href="#">Sobre Silas</a>
+                            </h3>
+                            <span className="text-gray-500 dark:text-gray-400">Desenvolvedor do projeto CTV</span>
+                            <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Olá! Meu nome é Silas, sou estudante de Análise e Desenvolvimento de Sistemas e já atuo no ramo da tecnologia. Tenho experiência em análise de dados e Power BI, áreas que me motivam pela capacidade de transformar informações em soluções práticas e visuais.
+                                Além do mundo da tecnologia, lidero um grupo de adolescentes e tenho a oportunidade de compartilhar mensagens que já alcançaram mais de 200 pessoas. Essa experiência fortalece minha comunicação, liderança e paixão por inspirar vidas.
+                                Acredito que unir propósito e tecnologia é essencial: enquanto a tecnologia gera inovação, o propósito dá sentido ao que fazemos.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
