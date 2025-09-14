@@ -50,24 +50,29 @@ export default function sobreNos() {
 
                             <div className="p-5">
                                 <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-
-                                    <h2 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Como Começou</h2>
+                                    <br/>
+                                    <strong className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Como Começou</strong>
+                                    <br/>
                                     O Cat the Vision começou de uma forma bastante simples, <strong className='text-light-400 dark:text-green-400'>como um método de estudo</strong>. Eu, Arthur, sempre busquei maneiras eficientes de fixar o conteúdo das aulas e, por isso, comecei a gravar vídeos resolvendo os problemas e exercícios passados pelos professores. A idéia era revisar o material de uma forma mais dinâmica e, ao mesmo tempo, consolidar meu próprio aprendizado.
 
                                     Com o tempo, compartilhei essa prática com alguns amigos, que logo se interessaram pelos vídeos. Eles começaram a pedir que eu enviasse os vídeos para ajudá-los a entender melhor os conteúdos das aulas. Foi então que percebi que aquilo que era inicialmente um método de estudo pessoal poderia ajudar muito mais pessoas além dos meus amigos. Surgiu, assim, a ideia de <strong className='text-light-400 dark:text-green-400'>criar uma plataforma</strong> onde esses vídeos pudessem ser acessados por qualquer pessoa que precisasse de ajuda: o Cat the Vision.
-
-                                    <h2 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Nossa missão</h2>
+                                    <br/>
+                                    <strong className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Nossa missão</strong>
+                                    <br/>
                                     No Cat the Vision, <strong className='text-light-400 dark:text-green-400'>acreditamos que o conhecimento é mais eficaz quando compartilhado.</strong> Nossa missão é oferecer uma plataforma acessível e colaborativa, onde estudantes possam encontrar vídeos explicativos que simplificam a resolução de problemas e exercícios. Queremos ser uma ferramenta que ajude não apenas a entender o conteúdo, mas também a fixá-lo de forma prática e eficiente.
-
-                                    <h2 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Como funciona</h2>
+                                    <br/>
+                                    <strong className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Como funciona</strong>
+                                    <br/>
                                     A plataforma reúne vídeos gravados durante sessões de estudo, <strong className='text-light-400 dark:text-green-400'>onde é resolvido problemas e exercícios passados em aulas ou estudos pessoais.</strong> Esses vídeos são organizados de forma clara e intuitiva, para que qualquer pessoa possa encontrar o conteúdo que precisa de maneira rápida e fácil.
 
                                     <strong className='text-light-400 dark:text-green-400'>Mas o Cat the Vision não para por aí!</strong> No futuro, planejamos expandir a plataforma, incluindo conteúdos independentes e abrangendo novas áreas do conhecimento. Além disso, <strong className='text-light-400 dark:text-green-400'>queremos que a plataforma seja um espaço colaborativo.</strong> Por isso, estamos criando um sistema onde qualquer pessoa pode contribuir com vídeos. Se você tem vontade de gravar um vídeo explicativo, basta entrar em contato conosco. Nossa equipe analisará o material e, se aprovado, ele será publicado em um módulo correspondente ao conteúdo. Afinal, acreditamos que o conhecimento cresce quando é compartilhado.
-
-                                    <h2 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Nossa visão para o futuro</h2>
+                                    <br/>
+                                    <strong className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Nossa visão para o futuro</strong>
+                                    <br/>
                                     Queremos que o Cat the Vision se torne uma referência para estudantes que buscam ajuda prática e direta. Nosso objetivo é expandir a plataforma, alcançando cada vez mais pessoas e oferecendo conteúdos diversificados e de alta qualidade. Além disso,  <strong className='text-light-400 dark:text-green-400'>queremos fortalecer a comunidade de colaboradores, criando uma rede de apoio onde todos possam aprender e ensinar.</strong>
-
-                                    <h2 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Faça parte dessa jornada</h2>
+                                    <br/>
+                                    <strong className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Faça parte dessa jornada</strong>
+                                    <br/>
                                     <strong className='text-green-400 dark:text-green-400'>Se você se identifica com nossa missão e quer contribuir de alguma forma,</strong> seja assistindo aos vídeos, compartilhando a plataforma ou enviando seu próprio conteúdo, você é parte fundamental do Cat the Vision. Juntos, podemos transformar a maneira como aprendemos e ensinamos.
                                 </p>
                                 <a href="/contato">

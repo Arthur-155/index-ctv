@@ -34,4 +34,9 @@ public class LoginService {
     public void deletarLogin(int id){
         loginRepository.deleteById(id);
     }
+
+    public Optional<Login> autenticar(String email, String senha) {
+        return loginRepository.findByEmail(email)
+                .filter(u -> u.getSenha().equals(senha));
+    }
 }
