@@ -39,4 +39,12 @@ public class LoginService {
         return loginRepository.findByEmail(email)
                 .filter(u -> u.getSenha().equals(senha));
     }
+
+    public Login atualizarLogin(int id, Login login) {
+        Login novoLogin = selectLoginById(id);
+        novoLogin.setNome(login.getNome());
+        novoLogin.setEmail(login.getEmail());
+        novoLogin.setSenha(login.getSenha());
+        return loginRepository.save(novoLogin);
+    }
 }

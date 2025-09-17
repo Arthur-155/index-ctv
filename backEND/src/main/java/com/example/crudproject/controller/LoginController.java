@@ -53,4 +53,9 @@ public class LoginController {
     public void deletar(@PathVariable int id){
         loginService.deletarLogin(id);
     }
+
+    @PutMapping("/{id}")
+    public Login atualizar(@PathVariable int id, @RequestBody Login body){
+        return loginService.atualizarLogin(id, body);
+    }
 }
