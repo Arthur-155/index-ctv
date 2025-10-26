@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import {JSX, useState} from "react";
 
-const API_BASE = "http://localhost:8090";
+const API_BASE = "http://localhost:8080";
 
 export default function Login(): JSX.Element {
     const router = useRouter();

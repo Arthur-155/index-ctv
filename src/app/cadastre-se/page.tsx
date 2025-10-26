@@ -9,7 +9,7 @@ type FormState = {
     confirmarSenha: string;
 };
 
-const API_BASE = "http://localhost:8090";
+const API_BASE = "http://localhost:8080";
 
 export default function Cadastrar() {
     const [form, setForm] = useState<FormState>({
