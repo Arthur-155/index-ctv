@@ -69,121 +69,204 @@
 
 
 
-    async function perfil() {
-       return(
-         <section className="bg-gray-50 dark:bg-gray-900">
-            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-                    <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                        <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                            Bem-Vindo(a) ao seu perfil
-                        </h1>
-                                <div
-                                    className="flex items-center p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800"
-                                    role="alert">
-                                    <svg className="shrink-0 inline w-4 h-4 me-3" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                    </svg>
-                                    <span className="sr-only">Info</span>
-                                    <div>
-                                        <span className="font-medium">As senhas não conferem!</span>
-                                    </div>
-                                </div>
-                              
-                                <div
-                                    className="flex items-center p-4 mb-4 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800"
-                                    role="alert">
-                                    <svg className="shrink-0 inline w-4 h-4 me-3" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                                    </svg>
-                                    <span className="sr-only">Info</span>
-                                    <div>
-                                        <span className="font-medium">Login realizado com sucesso!</span>
-                                    </div>
-                                </div>
-                            
-                            <div>
-                                <label
-                                    htmlFor="nomeUsuario"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                >
-                                    Nome Completo
-                                </label>
-                                <input
-                                    type="text"
-                                    name="nomeUsuario"
-                                    id="nomeUsuario"
-                                    placeholder="Seu nome"
-                                    required
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                />
-                            </div>
+// Perfil React sem Firebase
+// Requisitos de backend esperados:
+// 1) GET    /api/profile              -> { id, name, email, phone, about, avatarUrl }
+// 2) PUT    /api/profile              -> aceita JSON { name, phone, about } e retorna perfil atualizado
+// 3) POST   /api/profile/avatar       -> multipart/form-data { file } e retorna { avatarUrl }
+// 4) PATCH  /api/profile/password     -> JSON { newPassword }
+// Ajuste os endpoints conforme seu backend.
 
-                            <div>
-                                <label
-                                    htmlFor="email"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                >
-                                    E-Mail
-                                </label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="seu_email@hotmail.com"
-                                    required
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                />
-                            </div>
 
-                            <div>
-                                <label
-                                    htmlFor="password"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                >
-                                    Senha
-                                </label>
-                                <input
-                                    type="password"
-                                    name="senha"
-                                    id="password"
-                                    placeholder="••••••••"
-                                    required
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                />
-                            </div>
+"use client";
 
-                            <div>
-                                <label
-                                    htmlFor="confirmPassword"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                >
-                                    Confirmar Senha
-                                </label>
-                                <input
-                                    type="password"
-                                    name="confirmarSenha"
-                                    id="confirmPassword"
-                                    placeholder="••••••••"
-                                    required
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                />
-                            </div>
-                            <button
-                                type="submit"
-                                className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 cursor-pointer disabled:opacity-60"
-                            >Mudar informações
-                            </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-       )
+import React, { useEffect, useMemo, useRef, useState } from "react";
+
+
+interface ProfileDTO {
+    id: string;
+    name: string;
+    email: string;
+    phone?: string | null;
+    about?: string | null;
+    avatarUrl?: string | null;
+}
+
+export default function Perfil() {
+    const [loading, setLoading] = useState(true);
+    const [saving, setSaving] = useState(false);
+    const [status, setStatus] = useState<string | null>(null);
+
+    const [profile, setProfile] = useState<ProfileDTO | null>(null);
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [about, setAbout] = useState("");
+
+    const [avatarFile, setAvatarFile] = useState<File | null>(null);
+    const [avatarPreview, setAvatarPreview] = useState<string | null>(null);
+
+    const [newPassword, setNewPassword] = useState("");
+    const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+
+    useEffect(() => {
+        let active = true;
+        (async () => {
+            setLoading(true);
+            setStatus(null);
+            try {
+                const res = await fetch("/api/perfil", { credentials: "include" });
+                if (!res.ok) throw new Error(`Falha ao carregar perfil: ${res.status}`);
+                const data: ProfileDTO = await res.json();
+                if (!active) return;
+                setProfile(data);
+                setName(data.name ?? "");
+                setPhone(data.phone ?? "");
+                setAbout(data.about ?? "");
+            } catch (e: any) {
+                if (!active) return;
+                setStatus(e?.message ?? "Erro ao carregar perfil");
+            } finally {
+                if (active) setLoading(false);
+            }
+        })();
+        return () => {
+            active = false;
+        };
+    }, []);
+
+
+    useEffect(() => {
+        if (!avatarFile) {
+            setAvatarPreview(null);
+            return;
+        }
+        const url = URL.createObjectURL(avatarFile);
+        setAvatarPreview(url);
+        return () => URL.revokeObjectURL(url);
+    }, [avatarFile]);
+
+    async function handleSave(e: React.FormEvent) {
+        e.preventDefault();
+        if (!profile) return;
+        setSaving(true);
+        setStatus(null);
+
+        try {
+
+            let newAvatarUrl = profile.avatarUrl ?? null;
+            if (avatarFile) {
+                const form = new FormData();
+                form.append("file", avatarFile);
+                const up = await fetch("/api/profile/avatar", {
+                    method: "POST",
+                    body: form,
+                    credentials: "include",
+                });
+                if (!up.ok) throw new Error("Falha no upload do avatar");
+                const body = await up.json();
+                newAvatarUrl = body.avatarUrl ?? null;
+            }
+
+
+            const upd = await fetch("/api/profile", {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                credentials: "include",
+                body: JSON.stringify({ name, phone, about, avatarUrl: newAvatarUrl }),
+            });
+            if (!upd.ok) throw new Error("Falha ao salvar alterações");
+            const saved: ProfileDTO = await upd.json();
+            setProfile(saved);
+            setStatus("Perfil atualizado");
+            setAvatarFile(null);
+        } catch (e: any) {
+            setStatus(e?.message ?? "Erro ao salvar");
+        } finally {
+            setSaving(false);
+        }
     }
 
+    async function handleChangePassword() {
+        if (!newPassword || newPassword.length < 6) {
+            setStatus("Senha mínima de 6 caracteres");
+            return;
+        }
+        try {
+            const res = await fetch("/api/profile/password", {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                credentials: "include",
+                body: JSON.stringify({ newPassword }),
+            });
+            if (!res.ok) throw new Error("Falha ao trocar senha");
+            setNewPassword("");
+            setStatus("Senha alterada");
+        } catch (e: any) {
+            setStatus(e?.message ?? "Erro ao trocar senha");
+        }
+    }
 
-    export default perfil;
+    if (loading) {
+        return (
+            <main className="mx-auto max-w-3xl px-4 py-8">
+                <h1 className="text-2xl font-semibold">Perfil</h1>
+                <p className="mt-4 text-sm text-gray-500">Carregando…</p>
+            </main>
+        );
+    }
+
+    if (!profile) {
+        return (
+            <main className="mx-auto max-w-3xl px-4 py-8">
+                <h1 className="text-2xl font-semibold">Perfil</h1>
+                <p className="mt-4 text-sm text-red-600">Não foi possível obter os dados do usuário atual.</p>
+            </main>
+        );
+    }
+
+    return (
+        <main className="bg-gray-50 dark:bg-gray-900 py-[100px]">
+            <section className="  mx-auto  max-w-3xl px-4 py-8 space-y-8 rounded-2xl border p-4 bg-white sm:p-6 dark:bg-gray-800">
+
+                <header className="flex items-center gap-4">
+                    <div>
+                        <h1 className="text-2xl font-semibold dark:text-white">Seu perfil</h1>
+                    </div>
+                </header>
+
+                <div className="relative h-20 w-20 overflow-hidden rounded-2xl bg-gray-100">
+                    {profile.avatarUrl ? (
+                        <img src={profile.avatarUrl} alt="avatar" className="h-full w-full object-cover" />
+                    ) : (
+                        <div className="flex h-full w-full items-center justify-center dark:text-white">
+                            <span className="text-xl">👤</span>
+                        </div>
+                    )}
+                </div>
+
+                <div className="grid gap-1">
+                    <span className="text-xs dark:text-white">Nome</span>
+                    <p className="text-base dark:text-white">{profile.name}</p>
+                </div>
+
+                <div className="grid gap-1">
+                    <span className="text-xs dark:text-white">E-mail</span>
+                    <p className="text-sm dark:text-white">{profile.email}</p>
+                </div>
+
+                <div className="grid gap-1">
+                    <span className="text-xs dark:text-white">Telefone</span>
+                    <p className="text-base dark:text-white">{profile.phone ?? "-"}</p>
+                </div>
+
+                <div className="grid gap-1">
+                    <span className="text-xs dark:text-white">Sobre você</span>
+                    <p className="text-base whitespace-pre-wrap dark:text-white">{profile.about ?? "-"}</p>
+                </div>
+            </section>
+
+            {status && <p className="text-sm dark:text-white">{status}</p>}
+        </main>
+    );
+}
