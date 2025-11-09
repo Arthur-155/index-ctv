@@ -40,7 +40,7 @@ export default function Cadastrar() {
 
         try {
             setLoading(true);
-            const res = await fetch(`${API_BASE}/login`, {
+            const res = await fetch(`${API_BASE}/login/register`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

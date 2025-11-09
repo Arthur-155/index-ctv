@@ -19,7 +19,7 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
-    @PostMapping
+    @PostMapping("/register")
     public Login criarLogin(@RequestBody Login login){
         return loginService.insertLogin(login);
     }
@@ -52,5 +52,11 @@ public class LoginController {
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable int id){
         loginService.deletarLogin(id);
+    }
+
+    @GetMapping("/ranking")
+    public List<Map<String, Object>> rankingTop10() {
+        var tags = List.of("aluno", "professor","usuario");
+        return loginService.rankingTop10(tags);
     }
 }

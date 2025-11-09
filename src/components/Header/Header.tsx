@@ -60,7 +60,7 @@ export function Header() {
                         <li><Link href="/sobreNos" className="block py-2 px-3 text-gray-900 md:hover:text-green-700 dark:text-white md:p-0">Sobre nós</Link></li>
                         <li><Link href="/contato" className="block py-2 px-3 text-gray-900 md:hover:text-green-700 dark:text-white md:p-0">Contato</Link></li>
                         <li><Link href="/modulos" className="block py-2 px-3 text-gray-900 md:hover:text-green-700 dark:text-white md:p-0">Módulos</Link></li>
-
+                        <li><Link href="/ranking" className="block py-2 px-3 text-gray-900 md:hover:text-green-700 dark:text-white md:p-0">Ranking</Link></li>
                         {isAuthenticated ? (
                             <li className="relative">
                                 {/* Botão do dropdown com ID único */}
