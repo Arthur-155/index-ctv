@@ -7,19 +7,17 @@ import { useAuth } from "@/context/AuthContext";
 import { useEffect, useId } from "react";
 import { initFlowbite } from "flowbite";
 
-const API_BASE = "http://localhost:8090";
+const API_BASE = "http://localhost:8080";
 
 export function Header() {
     const { isAuthenticated, user, logout } = useAuth();
     const router = useRouter();
     const pathname = usePathname();
 
-    // IDs únicos para o par botão/menu
     const ddId = useId().replace(/:/g, "-");
     const btnId = `dropdownButton-${ddId}`;
     const menuId = `dropdownMenu-${ddId}`;
 
-    // inicializa o Flowbite ao montar e a cada troca de rota (dev/hot-reload inclusive)
     useEffect(() => {
         initFlowbite();
     }, [pathname]);
@@ -61,9 +59,9 @@ export function Header() {
                         <li><Link href="/contato" className="block py-2 px-3 text-gray-900 md:hover:text-green-700 dark:text-white md:p-0">Contato</Link></li>
                         <li><Link href="/modulos" className="block py-2 px-3 text-gray-900 md:hover:text-green-700 dark:text-white md:p-0">Módulos</Link></li>
                         <li><Link href="/ranking" className="block py-2 px-3 text-gray-900 md:hover:text-green-700 dark:text-white md:p-0">Ranking</Link></li>
+                        <li><Link href="/enviarVideo" className="block py-2 px-3 text-gray-900 md:hover:text-green-700 dark:text-white md:p-0">Enviar Vídeo</Link></li>
                         {isAuthenticated ? (
                             <li className="relative">
-                                {/* Botão do dropdown com ID único */}
                                 <button
                                     id={btnId}
                                     data-dropdown-toggle={menuId}
@@ -76,7 +74,6 @@ export function Header() {
                                     </svg>
                                 </button>
 
-                                {/* Menu com ID único correspondente */}
                                 <div
                                     id={menuId}
                                     className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
