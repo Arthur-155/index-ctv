@@ -9,7 +9,7 @@ type FormState = {
     confirmarSenha: string;
 };
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL;
 
 export default function Cadastrar() {
     const [form, setForm] = useState<FormState>({
