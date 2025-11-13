@@ -75,7 +75,6 @@ export default async function RankingPage() {
                 </div>
 
                 <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 md:p-6 m-1">
-                    {/* Cabeçalho da tabela */}
                     <div className="grid grid-cols-12 gap-2 pb-3 border-b border-gray-200 dark:border-gray-700 text-[10px] font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
                         <div className="col-span-2 md:col-span-1">Posição</div>
                         <div className="col-span-6 md:col-span-6">Usuário</div>
@@ -97,7 +96,6 @@ export default async function RankingPage() {
                         </div>
                     )}
 
-                    {/* Linhas */}
                     {data !== "error" &&
                         data.map((user, index) => {
                             const pos = index + 1;
@@ -111,7 +109,6 @@ export default async function RankingPage() {
                                     key={user.id}
                                     className={`grid grid-cols-12 gap-2 items-center py-3 border-b border-gray-100/60 dark:border-gray-800/60 last:border-0 ${topBg}`}
                                 >
-                                    {/* Posição / troféu */}
                                     <div className="col-span-2 md:col-span-1">
                                         <div
                                             className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-extrabold ${posStyle(
@@ -122,7 +119,6 @@ export default async function RankingPage() {
                                         </div>
                                     </div>
 
-                                    {/* Nome */}
                                     <div className="col-span-6 md:col-span-6">
                                         <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                                             {user.nome}
@@ -132,12 +128,9 @@ export default async function RankingPage() {
                                         </div>
                                     </div>
 
-                                    {/* Tag */}
                                     <div className="col-span-2 md:col-span-2">
                                         <RoleBadge tag={user.tag} />
                                     </div>
-
-                                    {/* Pontos */}
                                     <div className="col-span-2 md:col-span-3 text-right">
                                         <span className="text-sm font-bold text-green-600 dark:text-green-400">
                                             {user.pontos}

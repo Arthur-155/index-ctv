@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.81.1",
     "@tailwindcss/vite": "^4.0.14",
     "@types/firebase": "^2.4.32",
     "autoprefixer": "^10.4.21",

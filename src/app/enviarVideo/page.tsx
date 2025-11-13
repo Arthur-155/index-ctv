@@ -1,13 +1,16 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
 
-const DRIVE_FOLDER_URL =
-    "https://drive.google.com/drive/folders/1QPxMgx_EgSOypMk4j5j7J7OK9hZJidgO";
+const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 export default function EnviarVideo() {
     const [file, setFile] = useState<File | null>(null);
-    const [status, setStatus] = useState<string>("");
+    const [status, setStatus] = useState("");
     const [uploading, setUploading] = useState(false);
     const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -19,41 +22,56 @@ export default function EnviarVideo() {
 
     async function handleUpload() {
         if (!file || uploading) return;
-        setUploading(true);
-        setStatus("Enviando...");
+
         try {
-            const fd = new FormData();
-            fd.append("file", file);
+            setUploading(true);
+            setStatus("Enviando vídeo...");
 
-            const res = await fetch("/api/upload-video", { method: "POST", body: fd });
-            const data = await res.json();
+            const path = `videos/${Date.now()}-${file.name}`;
 
-            if (!res.ok) {
-                setStatus(`Erro: ${data?.error || "falha no upload"}`);
-                setUploading(false);
+            const { error: uploadError } = await supabase.storage
+                .from("videos")
+                .upload(path, file);
+
+            if (uploadError) {
+                setStatus("Erro no upload: " + uploadError.message);
                 return;
             }
 
-            const link: string =
-                data?.webViewLink || data?.webContentLink || "";
+            const { data: publicData } = supabase.storage
+                .from("videos")
+                .getPublicUrl(path);
 
-            setStatus(`OK. ID: ${data.id}${link ? ` | Link: ${link}` : ""}`);
+            const videoUrl = publicData.publicUrl;
 
-            // Redireciona: prioriza o link do arquivo; se não houver, abre a pasta.
-            window.location.assign(link || DRIVE_FOLDER_URL);
+            setStatus("Salvando no banco...");
+
+            const res = await fetch("http://localhost:8080/videos/save", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ urlDoVideo: videoUrl }),
+            });
+
+            if (!res.ok) {
+                const err = await res.text();
+                setStatus("Erro no backend: " + err);
+                return;
+            }
+
+            setStatus("Vídeo salvo com sucesso!");
+            setFile(null);
+            inputRef.current && (inputRef.current.value = "");
         } catch (e: any) {
-            setStatus(`Erro: ${e?.message || "desconhecido"}`);
+            setStatus("Erro: " + e.message);
         } finally {
             setUploading(false);
-            // limpa input para permitir reenviar o mesmo arquivo
-            if (inputRef.current) inputRef.current.value = "";
-            setFile(null);
         }
     }
 
+
     return (
         <section className="flex-col dark:bg-gray-800">
-            <div className="flex items-center justify-center w-full dark:bg-gray-800 p-10">
+            <div className="flex items-center justify-center w-full dark:bg-gray-800 p-2">
                 <label
                     htmlFor="dropzone-file"
                     onDragOver={(e) => e.preventDefault()}
@@ -65,7 +83,6 @@ export default function EnviarVideo() {
                         <svg
                             className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
                             aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 20 16"
                         >
@@ -80,7 +97,9 @@ export default function EnviarVideo() {
                         <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
                             <span className="font-semibold">Clique para enviar</span> ou arraste e solte
                         </p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Envie seu vídeo</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">
+                            Envie seu vídeo
+                        </p>
                     </div>
                     <input
                         ref={inputRef}
@@ -100,33 +119,17 @@ export default function EnviarVideo() {
                     disabled={!file || uploading}
                     className="px-4 py-2 rounded bg-blue-600 text-white disabled:opacity-50"
                 >
-                    {uploading ? "Enviando..." : "Enviar para o Drive"}
+                    {uploading ? "Enviando..." : "Enviar vídeo"}
                 </button>
+
                 <p className="mt-3 text-sm text-gray-600 dark:text-gray-300 break-all">
                     {file ? `Selecionado: ${file.name} (${file.size} bytes)` : "Nenhum arquivo selecionado"}
                 </p>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 break-all">{status}</p>
-            </div>
 
-            <section className="bg-white dark:bg-gray-900">
-                <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-                    <div className="grid gap-8 mb-6 lg:mb-16">
-                        <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-                            <div className="p-5">
-                                <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                                    <strong className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Como funciona
-                                    </strong>
-                                    <br />
-                                    O componente envia o arquivo via <code>FormData</code> para <code>/api/upload-video</code>.
-                                    O backend usa OAuth do Google Drive e grava na pasta definida por <code>DRIVE_FOLDER_ID</code>.
-                                    Após o sucesso, você é redirecionado para o arquivo (ou para a pasta).
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 break-all">
+                    {status}
+                </p>
+            </div>
         </section>
     );
 }
