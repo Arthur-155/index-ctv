@@ -9,19 +9,18 @@ export const metadata = {
     description: "Explore o CTV",
 };
 
-export default function RootLayout({children,}: { children: React.ReactNode;
+export default function RootLayout({ children, }: {
+    children: React.ReactNode;
 }) {
     return (
         <html lang="en">
-        <body className="antialiased">
-        <AuthProvider>
-            <Header />
-            {children}
-            <Footer />
-        </AuthProvider>
-
-        {/*<Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js" />*/}
-        </body>
+            <body className="antialiased">
+                <AuthProvider>
+                    <Header />
+                    {children}
+                    <Footer />
+                </AuthProvider>
+            </body>
         </html>
     );
 }

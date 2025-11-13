@@ -15,8 +15,8 @@ function RoleBadge({ tag }: { tag: string }) {
     if (lower === "aluno") {
         return (
             <span className={`${base} bg-green-100 text-green-700 border-green-300`}>
-        Aluno
-      </span>
+                Aluno
+            </span>
         );
     }
 
@@ -25,8 +25,8 @@ function RoleBadge({ tag }: { tag: string }) {
             <span
                 className={`${base} bg-blue-100 text-blue-700 border-blue-300`}
             >
-        Professor
-      </span>
+                Professor
+            </span>
         );
     }
 
@@ -35,15 +35,15 @@ function RoleBadge({ tag }: { tag: string }) {
             <span
                 className={`${base} bg-purple-100 text-purple-700 border-purple-300`}
             >
-        Admin
-      </span>
+                Admin
+            </span>
         );
     }
 
     return (
         <span className={`${base} bg-gray-100 text-gray-700 border-gray-300`}>
-      Usuário
-    </span>
+            Usuário
+        </span>
     );
 }
 
@@ -62,9 +62,9 @@ export default async function RankingPage() {
         <section className="bg-white dark:bg-gray-900">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
                 <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-10 mb-8 m-1">
-          <span className="bg-green-100 text-green-600 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-green-400 mb-2">
-            Ranking da Comunidade
-          </span>
+                    <span className="bg-green-100 text-green-600 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-green-400 mb-2">
+                        Ranking da Comunidade
+                    </span>
                     <h1 className="text-gray-900 dark:text-white text-3xl md:text-4xl font-extrabold mb-2">
                         Top 10 alunos e professores
                     </h1>
@@ -139,24 +139,29 @@ export default async function RankingPage() {
 
                                     {/* Pontos */}
                                     <div className="col-span-2 md:col-span-3 text-right">
-                    <span className="text-sm font-bold text-green-600 dark:text-green-400">
-                      {user.pontos}
-                    </span>
+                                        <span className="text-sm font-bold text-green-600 dark:text-green-400">
+                                            {user.pontos}
+                                        </span>
                                         <span className="ml-1 text-[10px] text-gray-500 dark:text-gray-400">
-                      pts
-                    </span>
+                                            pts
+                                        </span>
                                     </div>
                                 </div>
                             );
                         })}
                 </div>
-
-                <p className="mt-4 text-xs text-gray-500 dark:text-gray-500 m-1">
-                    Regras exemplo: criar vídeo (+20), like recebido (+5), comentário
+                <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+                    <br />
+                    <strong className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>Regras exemplo:</strong>
+                    <br />
+                    criar vídeo (+20), criar vídeo (+20), comentário
                     positivo (+3), assistir até o final (+1), responder dúvida (+10),
                     vídeo validado (+30), denúncia confirmada (-10), mau comportamento
                     (-999). A lógica está no backend.
+
                 </p>
+
+
             </div>
         </section>
     );
