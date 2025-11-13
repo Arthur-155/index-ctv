@@ -70,18 +70,29 @@ export default function EnviarVideo() {
 
 
     return (
-        <section className="flex-col dark:bg-gray-800">
-            <div className="flex items-center justify-center w-full dark:bg-gray-800 p-2">
+        <section className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4 py-10">
+            <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-md rounded-xl p-6">
+
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+                    Enviar vídeo para análise
+                </h1>
                 <label
                     htmlFor="dropzone-file"
                     onDragOver={(e) => e.preventDefault()}
                     onDrop={onDrop}
                     aria-busy={uploading}
-                    className="flex flex-col items-center justify-center w-full max-w-xl h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+                    className="
+                    flex flex-col items-center justify-center
+                    w-full h-60 rounded-xl border-2 border-dashed cursor-pointer
+                    bg-gray-50 dark:bg-gray-700
+                    border-gray-300 dark:border-gray-600
+                    hover:bg-gray-100 dark:hover:bg-gray-600
+                    transition
+                "
                 >
-                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                    <div className="flex flex-col items-center justify-center text-center px-4">
                         <svg
-                            className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                            className="w-10 h-10 mb-3 text-gray-500 dark:text-gray-300"
                             aria-hidden="true"
                             fill="none"
                             viewBox="0 0 20 16"
@@ -91,16 +102,18 @@ export default function EnviarVideo() {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth="2"
-                                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 
+                               5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 
+                               4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                             />
                         </svg>
-                        <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                            <span className="font-semibold">Clique para enviar</span> ou arraste e solte
+
+                        <p className="text-gray-700 dark:text-gray-300 text-sm">
+                            <span className="font-semibold">Clique aqui</span> ou arraste um vídeo
                         </p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">
-                            Envie seu vídeo
-                        </p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">Formatos suportados: mp4, mov, mkv</p>
                     </div>
+
                     <input
                         ref={inputRef}
                         id="dropzone-file"
@@ -111,25 +124,41 @@ export default function EnviarVideo() {
                         onChange={(e) => setFile(e.target.files?.[0] ?? null)}
                     />
                 </label>
-            </div>
+                <div className="mt-5">
+                    {file && (
+                        <div className="p-3 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm">
+                            <strong>Arquivo selecionado:</strong> {file.name} ({file.size} bytes)
+                        </div>
+                    )}
+                </div>
 
-            <div className="px-6">
+                {file && (
+                    <video
+                        src={URL.createObjectURL(file)}
+                        controls
+                        className="w-full mt-4 rounded-lg max-h-64 object-cover"
+                    />
+                )}
+
+
                 <button
                     onClick={handleUpload}
                     disabled={!file || uploading}
-                    className="px-4 py-2 rounded bg-blue-600 text-white disabled:opacity-50"
+                    className="
+                    w-full mt-6 py-3 rounded-lg
+                    bg-green-600 hover:bg-green-900
+                    text-white font-medium
+                    transition disabled:opacity-50
+                "
                 >
-                    {uploading ? "Enviando..." : "Enviar vídeo"}
+                    {uploading ? "Enviando vídeo..." : "Enviar vídeo"}
                 </button>
 
-                <p className="mt-3 text-sm text-gray-600 dark:text-gray-300 break-all">
-                    {file ? `Selecionado: ${file.name} (${file.size} bytes)` : "Nenhum arquivo selecionado"}
-                </p>
-
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 break-all">
+                <p className="mt-4 text-sm text-gray-600 dark:text-gray-300 break-all text-center">
                     {status}
                 </p>
             </div>
         </section>
     );
+
 }

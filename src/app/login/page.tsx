@@ -1,9 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import imagemDoGoogle from "@/assets/image/Logo-Google-G.png";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "@/services/firebase";
+
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import {JSX, useState} from "react";
@@ -20,29 +17,6 @@ export default function Login(): JSX.Element {
     const [msg, setMsg] = useState<string | null>(null);
     const [isError, setIsError] = useState(false);
 
-    const provider = new GoogleAuthProvider();
-    provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
-    provider.setCustomParameters({ login_hint: "user@example.com" });
-
-    async function fazerLoginGoogle() {
-        try {
-            setLoading(true);
-            setMsg(null);
-            setIsError(false);
-
-            const result = await signInWithPopup(auth, provider);
-            console.log("Usuário Logado (Google): ", result.user.displayName);
-
-            login();
-            router.push("/");
-        } catch (error: any) {
-            console.error(error);
-            setIsError(true);
-            setMsg(error?.message ?? "Falha ao logar com Google.");
-        } finally {
-            setLoading(false);
-        }
-    }
 
     async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -141,18 +115,7 @@ export default function Login(): JSX.Element {
                             </button>
                         </form>
 
-                        <button
-                            type="button"
-                            onClick={fazerLoginGoogle}
-                            disabled={loading}
-                            className="flex items-center gap-2 w-full justify-center text-white bg-primary-600 hover:bg-primary-700
-                                      focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg
-                                      text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-primary-700
-                                      dark:focus:ring-primary-800 cursor-pointer disabled:opacity-60"
-                        >
-                            <Image src={imagemDoGoogle} alt="Google logo" width={20} height={20} />
-                            Logar com Google
-                        </button>
+                        
 
                         <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                             Não tem conta ainda?{" "}

@@ -10,7 +10,6 @@ export type RankingItem = {
 
 export async function getRanking(): Promise<RankingItem[]> {
     const res = await fetch(`${API_BASE_URL}/login/ranking`, {
-        // sempre buscar pontos atualizados
         cache: "no-store",
     });
 

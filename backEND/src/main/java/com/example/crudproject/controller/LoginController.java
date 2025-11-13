@@ -2,7 +2,6 @@ package com.example.crudproject.controller;
 
 import com.example.crudproject.model.Login;
 import com.example.crudproject.service.LoginService;
-import jdk.jfr.Description;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

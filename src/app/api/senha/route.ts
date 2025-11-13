@@ -7,6 +7,5 @@ export async function PATCH(req: Request) {
     if (!newPassword || newPassword.length < 6) {
         return NextResponse.json({ error: "senha inválida" }, { status: 400 });
     }
-    // aqui você trocaria a senha no seu provider real
     return NextResponse.json({ ok: true }, { status: 200 });
 }
